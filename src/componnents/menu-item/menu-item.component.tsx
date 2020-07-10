@@ -1,11 +1,14 @@
 import React from "react";
-
+import { withRouter, RouteComponentProps} from 'react-router-dom'
 import './menu-item.styles.scss'
-import {IMenuItem} from "../../interfaces/menu-item.interfase";
+import {IMenuItem} from "@interfaces";
+
+export interface MenuItemProps extends IMenuItem, RouteComponentProps{
+
+}
 
 
-
-const MenuItem = ({title,imageUrl,linkUrl,id, size}: IMenuItem) => (
+const MenuItem: React.FC<MenuItemProps>  = ({title,imageUrl,linkUrl,id, size, history,match}: MenuItemProps ) => (
     <div style={{
             backgroundImage: `url(${imageUrl})`
         }}
@@ -15,6 +18,7 @@ const MenuItem = ({title,imageUrl,linkUrl,id, size}: IMenuItem) => (
             style={{
                 backgroundImage: `url(${imageUrl})`
             }}
+             onClick={()=>history.push(`${match.url}${linkUrl}`)}
         ></div>
         <div className='content'>
             <div className='title'>{title.toUpperCase() }</div>
@@ -24,4 +28,4 @@ const MenuItem = ({title,imageUrl,linkUrl,id, size}: IMenuItem) => (
 
 )
 
-export default MenuItem;
+export default withRouter(MenuItem);
