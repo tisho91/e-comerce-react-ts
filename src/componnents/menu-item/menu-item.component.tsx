@@ -1,9 +1,9 @@
 import React from "react";
 import { withRouter, RouteComponentProps} from 'react-router-dom'
 import './menu-item.styles.scss'
-import {IMenuItem} from "@interfaces";
+import {TMenuItem} from "@types";
 
-export interface MenuItemProps extends IMenuItem, RouteComponentProps{
+export interface MenuItemProps extends TMenuItem, RouteComponentProps{
 
 }
 

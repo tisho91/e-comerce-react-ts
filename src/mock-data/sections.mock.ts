@@ -1,7 +1,7 @@
-import {ISections} from "@interfaces";
+import {TSections} from "@types";
 import {SizeEnum} from "../enums/size.enum";
 
-export const SectionsMockData: ISections = {
+export const SECTION_DATA: TSections = {
     sections: [
         {
             title: 'hats',

@@ -1,16 +1,16 @@
 import React from "react";
 import MenuItem from "../menu-item/menu-item.component";
-import { ISections} from '@interfaces'
+import { TSections} from '@types'
 
 import './directory.styles.scss'
-import {SectionsMockData} from "../../mock-data/sections.mock";
+import {SECTION_DATA} from "../../mock-data/sections.mock";
 
 
 
-class Directory extends React.Component<{}, ISections>{
+class Directory extends React.Component<{}, TSections>{
     constructor(props:any) {
         super(props);
-        this.state = {...SectionsMockData}
+        this.state = {...SECTION_DATA}
     }
 
     render() {

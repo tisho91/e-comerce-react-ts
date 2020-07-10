@@ -2,7 +2,7 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@interfaces": ["./src/interfaces"]
+      "@types": ["./src/types"]
     }
   }
 }
