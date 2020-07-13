@@ -1,7 +1,8 @@
 import React from 'react';
 
-import './preview-collections.styles.scss'
+import './collection-preview.styles.scss'
 import {TShopItem, TShopData} from "@types";
+import CollectionItem from "../collection-item/collection-item.component";
 
 const CollectionPreview = ({title, items}: TShopData) => {
     return (
@@ -9,7 +10,7 @@ const CollectionPreview = ({title, items}: TShopData) => {
             <h1 className="title">{title.toUpperCase()}</h1>
             <div className="preview">
                 {items.map((item: TShopItem) =>(
-                    <div key={item.id}>{item.name}</div>
+                    <CollectionItem key={item.id} {...item}/>
                 ))}
             </div>
         </div>
