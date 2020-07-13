@@ -6,5 +6,8 @@ export type TSections = SectionsType;
 export type TShopData = ShopDataType
 export type TShopItem = ShopItemType
 
-
+export type TLogin = {
+    email:string;
+    password: string;
+}
 

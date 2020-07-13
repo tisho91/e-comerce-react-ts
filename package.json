@@ -2,7 +2,6 @@
   "name": "e-comerce-react-ts",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://tisho91.github.io/e-comerce-react-ts",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
