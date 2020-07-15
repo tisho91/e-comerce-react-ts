@@ -3,6 +3,7 @@ import {TLogin} from "@types";
 
 import './login.styles.scss'
 import FormInput from "../form-input/form-input.component";
+import CustomButton from "../custom-button/custom-button.component";
 
 class Login extends Component<any,any> {
     constructor(props:TLogin) {
@@ -29,12 +30,12 @@ class Login extends Component<any,any> {
     render() {
         return (
             <div className='sign-in'>
-                <h2>I already have an acocount</h2>
+                <h2 className='title'>I already have an acocount</h2>
                 <span>Login with email and password</span>
-
                 <form onSubmit={this.handleSubmit}>
                     <FormInput handleChange={this.handleChange} label='email' name="email" id='email' type="email" value={this.state.email} required/>
-                    <FormInput handleChange={this.handleChange} label='password++66' name="password" id='password' type="password" value={this.state.password} required/>
+                    <FormInput handleChange={this.handleChange} label='password' name="password" id='password' type="password" value={this.state.password} required/>
+                    <CustomButton type='submit' >Login</CustomButton>
                 </form>
             </div>
         );
