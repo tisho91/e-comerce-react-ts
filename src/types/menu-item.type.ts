@@ -1,6 +1,6 @@
 import {SizeEnum} from "../enums/size.enum";
 
-export type IMenuItemType = {
+export type MenuItemType = {
     title: string;
     imageUrl: string;
     id: number;
@@ -8,6 +8,6 @@ export type IMenuItemType = {
     linkUrl: string;
 }
 
-export type ISectionsType = {
-    sections: IMenuItemType[]
+export type SectionsType = {
+    sections: MenuItemType[]
 }
